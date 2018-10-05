@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" #pwd></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button (click)="signIn()">Sign In</button>
+
+    <button ion-button (click)="showPeopleData()">Shoe People Data</button>
+
+    <button ion-button (click)="showCountryData()">Show Country Data</button>
+
+    <button ion-button (click)="showFilmData()">Show FilmData Data</button>
+
+    
+  </div>
+
+  
