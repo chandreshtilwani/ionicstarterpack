@@ -1,0 +1,44 @@
+{
+  "dietgroups": [
+    {
+      "id": 1,
+      "name": "CEREALS (incl. Pasta, rice, bread, muesli etc.)"
+    },
+    {
+      "id": 2,
+      "name": "FRUIT & BEAR"
+    },
+    {
+      "id": 3,
+      "name": "VEGETABLES"
+    },
+    {
+      "id": 4,
+      "name": "MEAT, CHICKEN, EGG"
+    },
+    {
+      "id": 5,
+      "name": "DAIRY PRODUCTS"
+    },
+    {
+      "id": 6,
+      "name": "Nuts & seeds"
+    },
+    {
+      "id": 7,
+      "name": "SNACKS (CHOCOLATE, CODTERI, POTETCULL, POPPKORN and the like)"
+    },
+    {
+      "id": 8,
+      "name": "CAKE & BAKST"
+    },
+    {
+      "id": 9,
+      "name": "DRINK"
+    },
+    {
+      "id": 10,
+      "name": "CAKE & BAKST"
+    }
+  ]
+}
