@@ -7,43 +7,40 @@ import { NavController, AlertController } from 'ionic-angular';
 import { PeopleServiceProvider } from './../../providers/people-service/people-service';
 import { CountryListPage } from '../country-list/country-list';
 import { SecondPage } from '../second/second';
+import { RegisterPage } from '../register/register';
+import { LoginPage } from '../login/login';
+import { ChatwizardPage } from '../chatwizard/chatwizard';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  @ViewChild('username') uname;
-  @ViewChild("pwd") password;
-
-  
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public peopleService: PeopleServiceProvider, public httpClient: HttpClient) {
-  
+  constructor(public navCtrl: NavController, public peopleService: PeopleServiceProvider, public httpClient: HttpClient) {
+    
   }
 
-  signIn() {
-    // const alert = this.alertCtrl.create({
-    //   title: 'Login alert!',
-    //   subTitle: 'Login Successfully...' + this.uname.value,
-    //   buttons: ['OK']
-    // });
-
-    // alert.present();
-    // console.log(this.uname.value + ' ' + this.password.value);
-    this.navCtrl.push(FirstPage);
+  registerUser() {
+    this.navCtrl.push(RegisterPage);
   }
 
-  showCountryData(){
+  logIn() {
+    this.navCtrl.push(LoginPage);
+  }
+
+  showCountryData() {
     this.navCtrl.push(CountryListPage);
   }
 
-  showFilmData(){
+  showFilmData() {
     this.navCtrl.push(SecondPage);
   }
 
-  showPeopleData(){
+  showPeopleData() {
     this.navCtrl.push(FirstPage);
   }
-  
+
+  showChatModule() {
+    this.navCtrl.push(ChatwizardPage);
+  }
 }

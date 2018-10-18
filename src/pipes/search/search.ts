@@ -13,12 +13,11 @@ export class SearchPipe implements PipeTransform {
    * Takes a value and makes it lowercase.
    */
   transform(items: any[], terms: string): any[] {
-    debugger;
     if(!items) return [];
     if(!terms) return items;
     terms = terms.toLowerCase();
     return items.filter( it => {
-      return it.name.toLowerCase().includes(terms) || it.region.toLowerCase().includes(terms); // only filter country name
+      return it.name.toLowerCase().includes(terms) || it.region.toLowerCase().includes(terms); // filter country name and region
     });
   }
 }

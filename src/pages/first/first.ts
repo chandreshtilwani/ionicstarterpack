@@ -1,11 +1,8 @@
-import { CountryListPage } from './../country-list/country-list';
-import { HomePage } from './../home/home';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { PeopleServiceProvider } from '../../providers/people-service/people-service';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { FilmDetailPage } from '../film-detail/film-detail';
 
 /**
  * Generated class for the FirstPage page.
@@ -21,8 +18,11 @@ import { FilmDetailPage } from '../film-detail/film-detail';
 })
 export class FirstPage {
   people: any;
+  email: string;
  
-  constructor(public navCtrl: NavController, public peopleService: PeopleServiceProvider, public httpClient: HttpClient, public loadCtrl: LoadingController) {
+  constructor(private fire: AngularFireAuth, public navCtrl: NavController, public peopleService: PeopleServiceProvider, public httpClient: HttpClient, public loadCtrl: LoadingController) {
+    debugger;
+    this.email = this.fire.auth.currentUser ? this.fire.auth.currentUser.email : '';
     let loading = this.loadCtrl.create({
       content: 'Loading Please Wait...'
     });
